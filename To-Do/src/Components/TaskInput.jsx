@@ -2,7 +2,7 @@ import React from 'react';
 import CategorySelect from './CategorySelect';
 
 
-const TaskInput = ({ taskInput, setTaskInput, categories, selectedCategory, setSelectedCategory, isEditing, addTask, saveTask }) => (
+const TaskInput = ({ taskInput, setTaskInput, categories, selectedCategory, setSelectedCategory, isEditing, addTask, saveTask, theme }) => (
     <div className="mb-4">
         <input
             type="text"
@@ -11,7 +11,7 @@ const TaskInput = ({ taskInput, setTaskInput, categories, selectedCategory, setS
             value={taskInput}
             onChange={(e) => setTaskInput(e.target.value)}
         />
-        <CategorySelect categories={categories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+        <CategorySelect categories={categories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} theme={theme} />
         {isEditing ? (
             <button
                 className="w-full bg-green-500 text-white px-4 py-2 rounded shadow-sm hover:bg-green-600 transition"

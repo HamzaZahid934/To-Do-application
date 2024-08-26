@@ -1,11 +1,11 @@
 import React from 'react';
 
-const TaskItem = ({ task, toggleTaskInProgress, toggleTaskCompletion, editTask, deleteTask, completed }) => (
+const TaskItem = ({ task, toggleTaskInProgress, toggleTaskCompletion, editTask, deleteTask, completed, theme }) => (
     <li
-        className={`flex justify-between items-center p-4 rounded shadow-sm mb-2 transition-all duration-300 ${completed ? 'line-through' : ''} ${task.inProgress ? 'bg-yellow-100' : 'bg-red-100'}`}
+        className={`flex justify-between items-center p-4 rounded shadow-sm mb-2 transition-all duration-300 ${theme === 'light' ? 'bg-white text-black border-gray-300' : 'bg-gray-800 text-black border-gray-700'} ${completed ? 'line-through' : ''}  ${task.inProgress ? 'bg-yellow-100' : 'bg-red-100'}`}
     >
         <span className="flex-1" onClick={() => toggleTaskInProgress(task.id)}>
-            {task.text} - <em>{task.category}</em>
+            {task.text} - <strong>{task.category}</strong>
         </span>
         <div>
             <button

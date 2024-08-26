@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CategorySelect = ({ categories, selectedCategory, setSelectedCategory }) => (
+const CategorySelect = ({ categories, selectedCategory, setSelectedCategory, theme }) => (
     <select
         className={`w-full px-4 py-2 border rounded shadow-sm focus:outline-none mb-2 ${theme === 'light' ? 'bg-white text-black border-gray-300' : 'bg-gray-800 text-white border-gray-700'}`}
         value={selectedCategory}

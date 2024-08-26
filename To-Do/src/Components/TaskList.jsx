@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskItem from './TaskItem';
 
-const TaskList = ({ tasks, category, toggleTaskInProgress, toggleTaskCompletion, editTask, deleteTask, completed }) => (
+const TaskList = ({ tasks, category, toggleTaskInProgress, toggleTaskCompletion, editTask, deleteTask, completed, theme }) => (
     <div className="mt-8">
         <h2 className="text-2xl font-bold mb-4">{category}</h2>
         <ul className="mb-8">
@@ -14,6 +14,7 @@ const TaskList = ({ tasks, category, toggleTaskInProgress, toggleTaskCompletion,
                     editTask={editTask}
                     deleteTask={deleteTask}
                     completed={completed}
+                    theme={theme}
                 />
             ))}
         </ul>

@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import TaskInput from './Components/TaskInput';
 import TaskList from './Components/TaskList';
 import ThemeToggle from './Components/ThemeToggle';
-import { ToastContainer } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 function App() {
   const [tasks, setTasks] = useState([]);
@@ -108,7 +109,9 @@ function App() {
             isEditing={isEditing}
             addTask={addTask}
             saveTask={saveTask}
+            theme={theme}
           />
+
           <TaskList
             tasks={inProgressTasks}
             category="In Progress"

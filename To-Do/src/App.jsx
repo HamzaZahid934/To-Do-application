@@ -88,6 +88,7 @@ function App() {
 
   const toggleTheme = () => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
+    toast.info(`Switched to ${theme} theme!`);
   };
 
   const completedTasks = tasks.filter(task => task.completed);

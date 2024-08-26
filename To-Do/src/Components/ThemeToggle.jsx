@@ -1,13 +1,14 @@
 import React from 'react';
 
 const ThemeToggle = ({ theme, toggleTheme }) => (
-    <div className="absolute top-4 right-3 inline-flex items-center cursor-pointer">
+    <div className="absolute top-4 left-3 inline-flex items-center cursor-pointer">
         <input
             type="checkbox"
             id="theme-toggle-checkbox"
-            checked={theme === 'dark'}
+            checked={theme === 'light'}
             onChange={toggleTheme}
             className="sr-only"
+
         />
         <label
             htmlFor="theme-toggle-checkbox"

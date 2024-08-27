@@ -13,7 +13,7 @@ function App() {
   const [editTaskId, setEditTaskId] = useState(null);
   const [categories, setCategories] = useState(['Work', 'Personal']);
   const [selectedCategory, setSelectedCategory] = useState(categories[0]);
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks'));
@@ -87,8 +87,9 @@ function App() {
   };
 
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-    toast.info(`Switched to ${theme} theme!`);
+    setTheme(prevTheme => prevTheme === 'dark' ? 'light' : 'dark');
+    let themeavlue = localStorage.getItem('theme')
+    toast.info(`Switched to ${themeavlue === 'dark' ? 'light' : 'dark'} theme!`);
   };
 
   const completedTasks = tasks.filter(task => task.completed);

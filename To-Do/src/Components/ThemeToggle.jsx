@@ -12,8 +12,8 @@ const ThemeToggle = ({ theme, toggleTheme }) => (
         />
         <label
             htmlFor="theme-toggle-checkbox"
-            className="flex items-center cursor-pointer"
-        >
+            className="flex-row items-center cursor-pointer "
+        > Switch Theme
             <div className="relative">
                 <div
                     className={`block w-14 h-8 rounded-full ${theme === 'dark' ? 'bg-blue-500' : 'bg-gray-300'
